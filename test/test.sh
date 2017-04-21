@@ -8,4 +8,4 @@ pid=`echo $?`
 sleep 10
 kill $pid
 
-../dispatcher.sh 0
+../main.sh 0

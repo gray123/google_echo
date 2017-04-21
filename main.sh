@@ -6,7 +6,7 @@ if [[ ! "$SRATE" ]]; then
   SRATE=16000
 fi
 if [[ ! "$KEY" ]]; then
-KEY=AIzaSyAcalCzUvPmmJ7CZBFOEWx2Z1ZSn4Vs1gg
+KEY=AIzaSyAIiWBcR-VbycBhWuZyHyCopKAPEdVvK0E
 fi
 LANGUAGE=en_US
 THRSIZE=15
@@ -71,7 +71,7 @@ while true; do
         sed -n '2{p;q}' sed -e 's/^[[:space:]]*//g' -e 's/[[:space:]]*\$//g' ${resultstr}.s2t > ${resultstr}.question
         filesize=`wc -c ${resultstr}.question | awk '{print $1}'`
         if [ $filesize -gt 1 ];then
-          ./wolframaplah_query.py ${resultstr}.question > ${resultstr}.answer
+          ./dispatcher.py ${resultstr}.question > ${resultstr}.answer
           gtts-cli -f ${resultstr}.answer -l ${LANGUAGE:0:2} -o ${resultstr}.mp3
           mplayer ${resultstr}.mp3
         else
