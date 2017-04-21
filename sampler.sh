@@ -1,17 +1,5 @@
 #!/bin/bash
 
-record() {
-  local DURATION=$1
-  local SRATE=$2
-  local INFILE=$3
-    
-    if hash rec 2>/dev/null; then
-      rec -q -c 1 -r $SRATE $INFILE trim 0 $DURATION
-    else
-      timeout $DURATION parecord $INFILE --file-format=flac --rate=$SRATE --channels=1
-    fi
-}
-
 if [[ ! "$WORKDIR" ]]; then
   WORKDIR="/tmp"
 fi
@@ -24,6 +12,8 @@ if [[ ! "$SAMPLEINTER" ]]; then
   SAMPLEINTER=1
 fi
 
+mkdir -p $WORKDIR/speech
+
 while true; do
   if [ "$(ls -A $WORKDIR/speech)" ]; then
     filenum=`ls $WORKDIR/speech | sort -nr | head -n1`
@@ -31,5 +21,5 @@ while true; do
   else
     filenum=1
   fi
-  record $SAMPLEINTER $SRATE $WORKDIR/speech/${filenum}.flac
+  ./rec.sh -o $WORKDIR/speech/${filenum}.flac -d $SAMPLEINTER -r $SRATE
 done
