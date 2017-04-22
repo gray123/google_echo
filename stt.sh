@@ -67,7 +67,7 @@ if [[ -z "$SRATE" ]]; then
   SRATE=16000
 fi
 if [[ -z "$KEY" ]]; then
-  KEY="AIzaSyAIiWBcR-VbycBhWuZyHyCopKAPEdVvK0E"
+  KEY="AIzaSyAcalCzUvPmmJ7CZBFOEWx2Z1ZSn4Vs1gg"
 fi
 if [[ -z "$INFILE" ]]; then
   paramter_err "input file"

@@ -33,6 +33,6 @@ try:
     print askWiki(m.group(2))
 
   #no app is used, default to Wolfram-alpha
-  print askWolframalpha(query)
+  print askWolframalpha(oneline)
 except:
   print ""

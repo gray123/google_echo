@@ -1,0 +1,185 @@
+bash one_interaction.sh 
+Say something...
+Recorded your question to /tmp/res/2017Apr22_14-08-31.flac
+Google Speech API transcript:
+Recognition result:
+transcript: what is 5 x 2
+confidence: 0.94329983
+transcript: what is 5 times
+confidence: 0.86773479
+transcript: what is 5 x
+confidence: 0.93767434
+Walfram-Alpha reply:
+10
+MPlayer 1.2.1 (Debian), built with gcc-5.3.1 (C) 2000-2016 MPlayer Team
+
+Playing /tmp/res/2017Apr22_14-08-31.mp3.
+libavformat version 56.40.101 (external)
+Audio only file format detected.
+Load subtitles in /tmp/res/
+==========================================================================
+Opening audio decoder: [mpg123] MPEG 1.0/2.0/2.5 layers I, II, III
+AUDIO: 24000 Hz, 2 ch, s16le, 32.0 kbit/4.17% (ratio: 4000->96000)
+Selected audio codec: [mpg123] afm: mpg123 (MPEG 1.0/2.0/2.5 layers I, II, III)
+==========================================================================
+AO: [pulse] 24000Hz 2ch s16le (2 bytes per sample)
+Video: no video
+Starting playback...
+A:   0.6 (00.5) of 0.8 (00.8)  0.1% 
+
+
+Exiting... (End of file)
+kai@radius:~/google_echo/test$ bash one_interaction.sh 
+Say something...
+Recorded your question to /tmp/res/2017Apr22_14-08-42.flac
+Google Speech API transcript:
+Recognition result:
+transcript: what is cosine 30
+confidence: 0.96922767
+transcript: what is cosine of 30
+confidence: 0.78623396
+transcript: what is cosine of 32
+confidence: 0.88664716
+transcript: what is cosine of 38
+confidence: 0.8796528
+transcript: what is cosine 38
+confidence: 0.97705221
+Walfram-Alpha reply:
+I cannot find an answer
+MPlayer 1.2.1 (Debian), built with gcc-5.3.1 (C) 2000-2016 MPlayer Team
+
+Playing /tmp/res/2017Apr22_14-08-42.mp3.
+libavformat version 56.40.101 (external)
+Audio only file format detected.
+Load subtitles in /tmp/res/
+==========================================================================
+Opening audio decoder: [mpg123] MPEG 1.0/2.0/2.5 layers I, II, III
+AUDIO: 24000 Hz, 2 ch, s16le, 32.0 kbit/4.17% (ratio: 4000->96000)
+Selected audio codec: [mpg123] afm: mpg123 (MPEG 1.0/2.0/2.5 layers I, II, III)
+==========================================================================
+AO: [pulse] 24000Hz 2ch s16le (2 bytes per sample)
+Video: no video
+Starting playback...
+A:   2.0 (01.9) of 2.0 (02.0)  0.1% 
+
+
+Exiting... (End of file)
+kai@radius:~/google_echo/test$ bash one_interaction.sh 
+Say something...
+Recorded your question to /tmp/res/2017Apr22_14-08-53.flac
+Google Speech API transcript:
+Recognition result:
+transcript: who is Adele
+confidence: 0.95333546
+transcript: who is the Dell
+confidence: 0.96863109
+transcript: who is Adela
+confidence: 0.97564554
+Walfram-Alpha reply:
+full name | Adele Laurie Blue Adkins
+date of birth | Thursday, May 5, 1988 (age: 28 years)
+place of birth | London, Greater London, United Kingdom
+MPlayer 1.2.1 (Debian), built with gcc-5.3.1 (C) 2000-2016 MPlayer Team
+
+Playing /tmp/res/2017Apr22_14-08-53.mp3.
+libavformat version 56.40.101 (external)
+Audio only file format detected.
+Load subtitles in /tmp/res/
+==========================================================================
+Opening audio decoder: [mpg123] MPEG 1.0/2.0/2.5 layers I, II, III
+AUDIO: 24000 Hz, 2 ch, s16le, 32.0 kbit/4.17% (ratio: 4000->96000)
+Selected audio codec: [mpg123] afm: mpg123 (MPEG 1.0/2.0/2.5 layers I, II, III)
+==========================================================================
+AO: [pulse] 24000Hz 2ch s16le (2 bytes per sample)
+Video: no video
+Starting playback...
+A:  15.1 (15.1) of 15.0 (15.0)  0.1% 
+
+
+Exiting... (End of file)
+kai@radius:~/google_echo/test$ bash one_interaction.sh 
+Say something...
+Recorded your question to /tmp/res/2017Apr22_14-09-23.flac
+Google Speech API transcript:
+Recognition result:
+transcript: what is cosine 35
+confidence: 0.86337352
+transcript: what is cosine 30
+confidence: 0.84116936
+transcript: what is cosine of 35
+confidence: 0.86233073
+transcript: what is cosine of 30
+confidence: 0.86006528
+transcript: what is cosign 35
+confidence: 0.96579885
+Walfram-Alpha reply:
+I cannot find an answer
+MPlayer 1.2.1 (Debian), built with gcc-5.3.1 (C) 2000-2016 MPlayer Team
+
+Playing /tmp/res/2017Apr22_14-09-23.mp3.
+libavformat version 56.40.101 (external)
+Audio only file format detected.
+Load subtitles in /tmp/res/
+==========================================================================
+Opening audio decoder: [mpg123] MPEG 1.0/2.0/2.5 layers I, II, III
+AUDIO: 24000 Hz, 2 ch, s16le, 32.0 kbit/4.17% (ratio: 4000->96000)
+Selected audio codec: [mpg123] afm: mpg123 (MPEG 1.0/2.0/2.5 layers I, II, III)
+==========================================================================
+AO: [pulse] 24000Hz 2ch s16le (2 bytes per sample)
+Video: no video
+Starting playback...
+A:   2.0 (01.9) of 2.0 (02.0)  0.1% 
+
+
+Exiting... (End of file)
+kai@radius:~/google_echo/test$ bash one_interaction.sh 
+Say something...
+Recorded your question to /tmp/res/2017Apr22_14-09-35.flac
+Google Speech API transcript:
+Recognition result:
+transcript: who is Donald Trump
+confidence: 0.97705233
+Walfram-Alpha reply:
+full name | Donald John Trump
+date of birth | Friday, June 14, 1946 (age: 70 years)
+place of birth | New York City, New York
+MPlayer 1.2.1 (Debian), built with gcc-5.3.1 (C) 2000-2016 MPlayer Team
+
+Playing /tmp/res/2017Apr22_14-09-35.mp3.
+libavformat version 56.40.101 (external)
+Audio only file format detected.
+Load subtitles in /tmp/res/
+==========================================================================
+Opening audio decoder: [mpg123] MPEG 1.0/2.0/2.5 layers I, II, III
+AUDIO: 24000 Hz, 2 ch, s16le, 32.0 kbit/4.17% (ratio: 4000->96000)
+Selected audio codec: [mpg123] afm: mpg123 (MPEG 1.0/2.0/2.5 layers I, II, III)
+==========================================================================
+AO: [pulse] 24000Hz 2ch s16le (2 bytes per sample)
+Video: no video
+Starting playback...
+A:  13.3 (13.2) of 13.0 (13.0)  0.1% 
+
+
+Exiting... (End of file)
+kai@radius:~/google_echo/test$ bash one_interaction.sh 
+Say something...
+Recorded your question to /tmp/res/2017Apr22_14-10-02.flac
+Google Speech API transcript:
+Recognition result:
+transcript: what's the weather today
+confidence: 0.97705233
+Walfram-Alpha reply:
+temperature | 82 °F  (heat index: 84 °F)
+conditions | cloudy
+relative humidity | 53%  (dew point: 63 °F)
+wind speed | 15 mph
+(1 hour 19 minutes ago)
+'ascii' codec can't encode character u'\xb0' in position 17: ordinal not in range(128)
+MPlayer 1.2.1 (Debian), built with gcc-5.3.1 (C) 2000-2016 MPlayer Team
+
+Playing /tmp/res/2017Apr22_14-10-02.mp3.
+File not found: '/tmp/res/2017Apr22_14-10-02.mp3'
+Failed to open /tmp/res/2017Apr22_14-10-02.mp3.
+
+
+Exiting... (End of file)

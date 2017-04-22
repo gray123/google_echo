@@ -22,16 +22,17 @@ while true; do
   if [ "$(ls -A $WORKDIR/speech)" ]; then
     case "$st" in
       idle)
+      if [ `ls -1 $WORKDIR/speech | wc -l` -gt 5 ]; then
         filename=`ls $WORKDIR/speech | sort -n | head -n1`
         filesize=`ls -l --block-size=K $WORKDIR/speech/$filename | awk '{print $5}'`
         filesize=${filesize:: -1}
-        if [[ $filesize -le 14 ]]; then
+        if [ $filesize -le $THRSIZE ]; then
           rm -f $WORKDIR/speech/$filename
           echo "$WORKDIR/speech/${filename} is smaller than $THRSIZE"
         else
           filenum=${filename:: -5}
-          ./stt.sh -i $WORKDIR/speech/$filename -r $SRATE -l $LANGUAGE > $WORKDIR/text/${filenum}.s2t
-          sed -n '2{p;q}' sed -e 's/^[[:space:]]*//g' -e 's/[[:space:]]*\$//g' $WORKDIR/text/${filenum}.s2t > $WORKDIR/text/${filenum}
+          ./stt.sh -i $WORKDIR/speech/$filename -r $SRATE -l $LANGUAGE > $WORKDIR/speech/${filenum}.s2t
+          sed -n '2{p;q}' $WORKDIR/speech/${filenum}.s2t | awk -F':' '{print $2}' | sed -e 's/^[[:space:]]*//g' -e 's/[[:space:]]*\$//g' > $WORKDIR/text/${filenum}
           filesize=`wc -c $WORKDIR/text/$filenum | awk '{print $1}'`
           if [ $filesize -gt 1 ]; then
             begin_num=$filenum
@@ -39,18 +40,19 @@ while true; do
             echo "switch to $st"
           else
             echo "$WORKDIR/text/${filenum} is empty"
-            rm -f $WORKDIR/text/${filenum}.s2t
+            rm -f $WORKDIR/speech/${filenum}.s2t
             rm -f $WORKDIR/text/$filenum
             rm -f $WORKDIR/speech/${filename}
           fi
         fi
+      fi
       ;;
       takecmd)
         filenum=`ls $WORKDIR/text | sort -nr | head -n1`
         filenum=$(( ${filenum} + 1 ))
         if [[ -f $WORKDIR/speech/${filenum}.flac ]]; then
-          ./stt.sh -i $WORKDIR/speech/${filenum}.flac -r $SRATE -l $LANGUAGE > $WORKDIR/text/${filenum}.s2t
-          sed -n '2{p;q}' sed -e 's/^[[:space:]]*//g' -e 's/[[:space:]]*\$//g' $WORKDIR/text/${filenum}.s2t > $WORKDIR/text/${filenum}
+          ./stt.sh -i $WORKDIR/speech/${filenum}.flac -r $SRATE -l $LANGUAGE > $WORKDIR/speech/${filenum}.s2t
+          sed -n '2{p;q}' $WORKDIR/speech/${filenum}.s2t | awk -F':' '{pirnt $2}' | sed -e 's/^[[:space:]]*//g' -e 's/[[:space:]]*\$//g' > $WORKDIR/text/${filenum}
           filesize=`wc -c $WORKDIR/text/$filenum | awk '{print $1}'`
           if [ $filesize -lt 2 ]; then
             end_num=$filenum
@@ -68,7 +70,7 @@ while true; do
         to_comb_files=`cat $WORKDIR/speech/to_comb_files.txt | xargs`
         sox $to_comb_files ${resultstr}.flac
         ./stt.sh -i ${resultstr}.flac -r $SRATE -l ${LANGUAGE} > ${resultstr}.s2t
-        sed -n '2{p;q}' sed -e 's/^[[:space:]]*//g' -e 's/[[:space:]]*\$//g' ${resultstr}.s2t > ${resultstr}.question
+        sed -n '2{p;q}' ${resultstr}.s2t | awk -F':' '{print $2}' | sed -e 's/^[[:space:]]*//g' -e 's/[[:space:]]*\$//g' > ${resultstr}.question
         filesize=`wc -c ${resultstr}.question | awk '{print $1}'`
         if [ $filesize -gt 1 ];then
           ./dispatcher.py ${resultstr}.question > ${resultstr}.answer
